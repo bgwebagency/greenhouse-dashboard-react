@@ -8,11 +8,11 @@ describe('<App />', () => {
 		window.history.pushState({}, 'Home', '/')
 		renderWithProviders(<App />, false)
 
-		await expect(screen.findByText('Apple')).resolves.toBeInTheDocument()
-		await userEvent.click(screen.getByText('Apple'))
+		await expect(screen.findByText('Login')).resolves.toBeInTheDocument()
+		await userEvent.click(screen.getByText('Login'))
 
 		await expect(
-			screen.findByText('Vitamins per 100 g (3.5 oz)')
+			screen.findByText('Forgot your password?')
 		).resolves.toBeInTheDocument()
 	})
 })

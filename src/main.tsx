@@ -1,7 +1,7 @@
-import App from 'App'
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import App from 'App'
+import { GreenHouse } from 'greenhouse-react-ui'
+import { createRoot } from 'react-dom/client'
 import { registerSW } from 'virtual:pwa-register'
 import './index.css'
 
@@ -21,10 +21,10 @@ const container = document.querySelector('#root')
 if (container) {
 	const root = createRoot(container)
 	root.render(
-		<StrictMode>
+		<GreenHouse>
 			<QueryClientProvider client={queryClient}>
 				<App />
 			</QueryClientProvider>
-		</StrictMode>
+		</GreenHouse>
 	)
 }
